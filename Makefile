@@ -1,5 +1,6 @@
 NAME = libft.a
 
+
 CC = clang
 DEBUG = -g
 OPTIM = -O2
