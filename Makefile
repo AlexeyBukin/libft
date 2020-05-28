@@ -5,15 +5,14 @@ CC = clang
 DEBUG = -g
 OPTIM = -O2
 
-CFLAGS = -Wall -Wextra -Werror $(DEBUG)
+CFLAGS = -Wall -Wextra -Werror $(DEBUG) $(OPTIM)
 
 INCLUDE = -I include/
 
 BUILD_DIR = build/
 SRC_DIR = src/
 
-#SRC_FILES = $(shell find $(SRC_DIR) -not \( -path $(MAIN_DIR) -prune \) -type f -name "*.c")
-
+# ./update_srcs.sh will update this list
 #find src -type f -name '*.c' | sed 'N;N;s/\n/ /g' | sed "s/\$/ \\\\/" | column -t
 
 SRC_FILES = \
