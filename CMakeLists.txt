@@ -7,13 +7,13 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 project(ft)
 
 #file(GLOB SOURCES "src/*.c")
-
+# find src -type f -name '*.c' | sed "s/^/        /"
 set(FT_SOURCES
+        src/ft_free.c
         src/ft_bzero.c
         src/ft_return.c
         src/ft_toupper.c
-        src/file/ft_file_read.c
-        src/file/get_next_line.c
+        src/gnl/get_next_line.c
         src/ft_tolower.c
         src/ft_char_to_str.c
         src/test/insert_func.c
@@ -45,9 +45,10 @@ set(FT_SOURCES
         src/lst/ft_lstiter.c
         src/is/ft_isascii.c
         src/is/ft_isblank.c
-        src/is/ft_isdigit.c
-        src/is/ft_isalpha.c
         src/is/ft_iscomment.c
+        src/is/ft_isdigit.c
+        src/is/ft_isnum.c
+        src/is/ft_isalpha.c
         src/is/ft_isprint.c
         src/is/ft_isalnum.c
         src/ft_abs.c
@@ -63,6 +64,8 @@ set(FT_SOURCES
         src/mem/ft_memchr.c
         src/mem/ft_memmove.c
         src/mem/ft_memset.c
+        src/file/ft_file_read.c
+        src/file/get_next_line.c
         src/put/ft_putstr.c
         src/put/ft_putnbr_fd.c
         src/put/ft_putendl_int_var.c
@@ -83,12 +86,12 @@ set(FT_SOURCES
         src/str/ft_strmap.c
         src/str/ft_strcpy.c
         src/str/ft_strcat.c
-        src/str/ft_str_count.c
         src/str/ft_striteri.c
         src/str/ft_strncat.c
         src/str/ft_strtrim.c
         src/str/ft_strequ.c
         src/str/ft_strmapi.c
+        src/str/ft_str_count.c
         src/str/ft_strnstr.c
         src/str/ft_strrchr.c
         src/str/ft_striter.c
@@ -97,6 +100,7 @@ set(FT_SOURCES
         src/str/ft_strstr.c
         src/str/ft_strdel.c
         src/str/ft_strsub.c
+        src/str/ft_str_next_is.c
         src/str/ft_strncmp.c
         src/str/ft_strfnr.c
         src/str/ft_str_up.c
