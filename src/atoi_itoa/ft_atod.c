@@ -30,7 +30,7 @@ double			ft_atod(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		res = res * 10 + (str[i++] - 48);
 	res *= negative;
-	if (str[i] == '.')
+	if (str[i++] == '.')
 		while (str[i] >= '0' && str[i] <= '9')
 		{
 			negative /= 10;
