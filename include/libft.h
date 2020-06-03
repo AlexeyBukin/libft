@@ -6,7 +6,7 @@
 /*   By: kcharla <kcharla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 19:12:07 by kcharla           #+#    #+#             */
-/*   Updated: 2020/05/28 01:03:42 by hush             ###   ########.fr       */
+/*   Updated: 2020/06/04 00:12:53 by hush             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,12 @@ char			*ft_utoa_base(unsigned int value, char *base);
 /*
 ** file
 */
-# define BUFF_SIZE 127
+
+# define READ_BUFFER_SIZE 127
 
 int				get_next_line(int fd, char **line);
-char 			*ft_file_read(char *filename);
+char 			*ft_read_file(char *filename);
+char 			*ft_read_stream(int fd);
 
 /*
 ** is

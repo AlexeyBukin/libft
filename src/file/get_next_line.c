@@ -74,22 +74,22 @@ int				get_next_line(const int fd, char **line)
 {
 	int				one_if_res;
 	int				val;
-	static char		l_bs[255][BUFF_SIZE + 1];
+	static char		l_bs[255][READ_BUFFER_SIZE + 1];
 	char			*pointer;
-	char			buf[BUFF_SIZE + 1];
+	char			buf[READ_BUFFER_SIZE + 1];
 
 	pointer = l_bs[(fd >= 0) ? fd : 0];
 	if (fd < 0 || fd > 65535 || line == 0 || (read(fd, pointer, 0) < 0))
 		return (-1);
 	if ((val = get_last_buf(line, &pointer)) != 0)
 		return (val + (ft_strcpy(l_bs[fd], pointer) == 0));
-	while ((val = read(fd, buf, BUFF_SIZE)) > 0)
+	while ((val = read(fd, buf, READ_BUFFER_SIZE)) > 0)
 	{
 		buf[val] = '\0';
 		one_if_res = one_if(line, &pointer, buf);
 		if (one_if_res != 0)
 			return (one_if_res);
-		else if (val < BUFF_SIZE)
+		else if (val < READ_BUFFER_SIZE)
 			return (1);
 	}
 	l_bs[fd][0] = '\0';

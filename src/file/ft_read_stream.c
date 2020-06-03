@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_read.c                                     :+:      :+:    :+:   */
+/*   ft_read_stream.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hush <hush@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/04 01:12:12 by hush              #+#    #+#             */
-/*   Updated: 2020/05/22 16:49:16 by hush             ###   ########.fr       */
+/*   Created: 2020/06/03 22:37:54 by hush              #+#    #+#             */
+/*   Updated: 2020/06/04 00:01:12 by hush             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Reads file to one string
+** Reads from a given stream to one string
 ** Returns non-zero if error
 */
 
@@ -34,18 +34,16 @@ static int 		ft_looped(char **str, char *buf, int val)
 	return (0);
 }
 
-char 			*ft_file_read(char *filename)
+char 			*ft_read_stream(int fd)
 {
-	int				fd;
 	char 			*str;
 	int				val;
-	char			buf[BUFF_SIZE + 1];
+	char			buf[READ_BUFFER_SIZE + 1];
 
 	str = NULL;
-	fd = open(filename, O_RDONLY);
-	if (fd < 0 || fd > 65535)
+	if (fcntl(fd, F_GETFD) != 0)
 		return (NULL);
-	while ((val = read(fd, buf, BUFF_SIZE)) > 0)
+	while ((val = read(fd, buf, READ_BUFFER_SIZE)) > 0)
 		if (ft_looped(&str, buf, val) < 0)
 		{
 			close(fd);
