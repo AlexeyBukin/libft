@@ -6,7 +6,7 @@
 /*   By: hush <hush@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 22:37:54 by hush              #+#    #+#             */
-/*   Updated: 2020/06/04 00:33:10 by hush             ###   ########.fr       */
+/*   Updated: 2020/06/18 01:23:03 by hush             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 ** Returns non-zero if error
 */
 
-static int 		ft_looped(char **str, char *buf, int val)
+static int			ft_looped(char **str, char *buf, int val)
 {
-	char 	*old;
+	char			*old;
 
 	if (str == NULL)
 		return (-1);
@@ -34,9 +34,9 @@ static int 		ft_looped(char **str, char *buf, int val)
 	return (0);
 }
 
-char 			*ft_read_stream(int fd)
+char				*ft_read_stream(int fd)
 {
-	char 			*str;
+	char			*str;
 	int				val;
 	char			buf[READ_BUFFER_SIZE + 1];
 

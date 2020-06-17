@@ -62,8 +62,8 @@ char			*ft_utoa_base(unsigned int value, char *base);
 # define READ_BUFFER_SIZE 127
 
 int				get_next_line(int fd, char **line);
-char 			*ft_read_file(char *filename);
-char 			*ft_read_stream(int fd);
+char			*ft_read_file(char *filename);
+char			*ft_read_stream(int fd);
 
 /*
 ** is
@@ -104,7 +104,7 @@ t_list			*ft_lstnew(void const *content, size_t content_size);
 void			*ft_mem_rev(void *pointer_v, size_t count);
 void			*ft_malloc(size_t size);
 void			*ft_realloc(void *ptr, size_t old, size_t new);
-void			*ft_realloc_arr(void *ptr, size_t old,	size_t new, size_t el);
+void			*ft_realloc_arr(void *ptr, size_t old, size_t new, size_t el);
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *d, const void *s, int c, size_t count);
 void			*ft_memchr(const void *p, int c, size_t n);

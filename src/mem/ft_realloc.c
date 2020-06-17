@@ -14,7 +14,7 @@
 
 void	*ft_malloc(size_t size)
 {
-	return ft_memalloc(size);
+	return (ft_memalloc(size));
 }
 
 void	*ft_realloc(void *old_ptr, size_t old_size, size_t new_size)

@@ -17,12 +17,10 @@
 ** Returns NULL on error
 */
 
-char 			*ft_read_file(char *filename)
+char				*ft_read_file(char *filename)
 {
 	int				fd;
 
 	fd = open(filename, O_RDONLY);
 	return (ft_read_stream(fd));
 }
-
-

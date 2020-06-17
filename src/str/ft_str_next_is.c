@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int 	ft_str_next_is(const char *text, const char *word)
+int			ft_str_next_is(const char *text, const char *word)
 {
 	return (ft_strnequ(text, word, ft_strlen(word)));
 }

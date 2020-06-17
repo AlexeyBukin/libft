@@ -28,13 +28,13 @@ float			ft_atof(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
-		res = (float) (res * 10 + (str[i++] - 48.0));
+		res = (float)(res * 10 + (str[i++] - 48.0));
 	res *= negative;
 	if (str[i] == '.')
 		while (str[i] >= '0' && str[i] <= '9')
 		{
 			negative /= 10;
-			res += (float) (negative * (str[i] - 48.0));
+			res += (float)(negative * (str[i] - 48.0));
 			i++;
 		}
 	return (res);

@@ -26,7 +26,7 @@ long long int	ft_absl(long long int a)
 	return (a);
 }
 
-double          ft_absd(double a)
+double			ft_absd(double a)
 {
     if (a < 0)
         return (a * (-1));
