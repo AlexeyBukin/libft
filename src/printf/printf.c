@@ -63,9 +63,9 @@ void	update_buf(size_t *buf_len, char **buf, char *stg_i, int *all_byte)
 	(*all_byte)++;
 }
 
-t_data	init(char *str)
+t_pf_data	init(char *str)
 {
-	t_data	my_data;
+	t_pf_data	my_data;
 
 	my_data.all_byte = 0;
 	my_data.string = str;
@@ -79,7 +79,7 @@ int		ft_printf(const char *format, ...)
 	int		flags[FLAGS_LEN];
 	t_stg	resolved;
 	va_list	arg;
-	t_data	d;
+	t_pf_data	d;
 	int		i;
 
 	va_start(arg, format);

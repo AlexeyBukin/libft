@@ -84,13 +84,13 @@ typedef union			u_ldouble_10
 ** Norme crutch/bicycle
 */
 
-typedef struct			s_data
+typedef struct			s_pf_data
 {
 	int		all_byte;
 	char	*buf;
 	char	*string;
 	size_t	buf_len;
-}						t_data;
+}						t_pf_data;
 
 typedef struct			s_stg
 {
