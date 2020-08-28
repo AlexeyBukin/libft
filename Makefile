@@ -7,7 +7,7 @@ OPTIM = -O2
 
 CFLAGS = -Wall -Wextra -Werror $(DEBUG) $(OPTIM)
 
-INCLUDE = -I include/
+INCLUDE = -I inc/
 
 BUILD_DIR = build/
 SRC_DIR = src/
@@ -66,8 +66,8 @@ SRC_DIRS = $(shell find $(SRC_DIR) -type d)
 BUILD_DIRS_REC = $(patsubst $(SRC_DIR)%, $(BUILD_DIR)%, $(SRC_DIRS))
 
 HEADER_FILES = \
-include/libft.h   \
-include/printf.h
+inc/libft.h   \
+inc/printf.h
 
 .PHONY: clean fclean all
 
