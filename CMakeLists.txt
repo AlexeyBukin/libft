@@ -52,7 +52,7 @@ set(${PROJECT_NAME}_SOURCES
 		src/lst/ft_lstdelone.c                  src/put/ft_putstr.c                     src/str/ft_strtrim.c
 		src/lst/ft_lstiter.c                    src/put/ft_putstr_fd.c                  src/test/insert_func.c
 		src/lst/ft_lstmap.c                     src/put/ft_putstr_free.c                src/test/insert_mem.c
-		src/lst/ft_lstnew.c                     src/str/ft_str_add.c
+		src/lst/ft_lstnew.c                     src/str/ft_str_add.c			src/str/ft_str_split_str.c
         )
 
 #target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include )
