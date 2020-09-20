@@ -185,6 +185,7 @@ char			*ft_strrev(char *s);
 char			*ft_str_dup_rev(const char *s);
 
 char			**ft_strsplit(char const *s, char c);
+char			**ft_str_split_str(const char *s, const char *delim);
 char			*ft_strstr(const char *s1, const char *s2);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strsub_free(char *s, unsigned int start, size_t len);
