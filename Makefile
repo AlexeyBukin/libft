@@ -58,7 +58,8 @@ src/lst/ft_lstdel.c             src/put/ft_putnbr_fd.c          src/str/ft_strsu
 src/lst/ft_lstdelone.c          src/put/ft_putstr.c             src/str/ft_strtrim.c \
 src/lst/ft_lstiter.c            src/put/ft_putstr_fd.c          src/test/insert_func.c \
 src/lst/ft_lstmap.c             src/put/ft_putstr_free.c        src/test/insert_mem.c \
-src/lst/ft_lstnew.c             src/str/ft_str_add.c
+src/lst/ft_lstnew.c             src/str/ft_str_add.c \
+src/str/ft_str_split_str.c 
 
 O_FILES = $(patsubst $(SRC_DIR)%.c, $(BUILD_DIR)%.o, $(SRC_FILES))
 
