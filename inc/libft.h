@@ -6,7 +6,7 @@
 /*   By: kcharla <kcharla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 19:12:07 by kcharla           #+#    #+#             */
-/*   Updated: 2020/06/18 01:33:28 by hush             ###   ########.fr       */
+/*   Updated: 2020/10/23 23:31:32 by kcharla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@
 typedef unsigned char	t_byte;
 typedef char			t_bool;
 
-# define FALSE 0
-# define TRUE  1
+/*
+** Conflict with other libraries (gtk)
+** # define FALSE 0
+** # define TRUE  1
+*/
+
 
 /*
 ** atoi-itoa
