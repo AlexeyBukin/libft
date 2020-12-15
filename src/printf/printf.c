@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	after_taking(int *flags, int *all_byte, t_stg resolved, int *i)
+void		after_taking(int *flags, int *all_byte, t_stg resolved, int *i)
 {
 	int		len;
 
@@ -38,7 +38,7 @@ void	after_taking(int *flags, int *all_byte, t_stg resolved, int *i)
 	}
 }
 
-void	write_from_buf(char *buf, size_t *buf_len)
+void		write_from_buf(char *buf, size_t *buf_len)
 {
 	if (buf == NULL || buf_len == NULL)
 		return ;
@@ -46,7 +46,7 @@ void	write_from_buf(char *buf, size_t *buf_len)
 	*buf_len = 0;
 }
 
-void	update_buf(size_t *buf_len, char **buf, char *stg_i, int *all_byte)
+void		update_buf(size_t *buf_len, char **buf, char *stg_i, int *all_byte)
 {
 	if (buf_len == NULL || buf == NULL || stg_i == NULL || all_byte == NULL)
 		return ;
@@ -74,13 +74,13 @@ t_pf_data	init(char *str)
 	return (my_data);
 }
 
-int		ft_printf(const char *format, ...)
+int			ft_printf(const char *format, ...)
 {
-	int		flags[FLAGS_LEN];
-	t_stg	resolved;
-	va_list	arg;
+	int			flags[FLAGS_LEN];
+	t_stg		resolved;
+	va_list		arg;
 	t_pf_data	d;
-	int		i;
+	int			i;
 
 	va_start(arg, format);
 	d = init((char *)format);

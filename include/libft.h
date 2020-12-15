@@ -30,7 +30,6 @@ typedef char			t_bool;
 ** # define TRUE  1
 */
 
-
 /*
 ** atoi-itoa
 */
@@ -68,6 +67,7 @@ char			*ft_utoa_base(unsigned int value, char *base);
 int				get_next_line(int fd, char **line);
 char			*ft_read_file(char *filename);
 char			*ft_read_stream(int fd);
+int				ft_read_files(char **dest, char *filenames);
 
 /*
 ** is
